@@ -1,138 +1,89 @@
-<html>
+<html lang="">
+    <head>
+        <title>Jack N Poy - Project </title>
+        <link rel="stylesheet" href="./assets/style.css"/>
 
-<head>
-    <title>This is my application </title>
+    </head>
+    <body onload="initialized()">
+        <div class="container-main">
+            <div class="container">
+                <div class="container-left">
+                    <!-- left -->
+                    <div class="score-board">
+                        <ul>
+                            <li>
+                                <span>
+                                    You
+                                </span>
+                            </li>
+                            <li>
+                                <div class="human-life" id="human-life"> </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container-piece">
+                        <div>
+                            <img id="human-choice-image" src="./assets/images/paper2.gif"  />
+                        </div>
+                    </div>
+                </div>
 
-    <link rel="stylesheet" href="./assets/style.css" />
+                 <div class="container-center">
+                     <div>
+                         <span class="round-text">
+                            Round
+                            <span id="round-counter">1</span>
+                         </span>
+                     </div>
+                     <div id="round-winner">
+                          <span class="round-winner-text">
+                             DRAW
+                          </span>
+                     </div>
+                     <div>
+                        <span class="vs-text">
+                            VS
+                        </span>
+                     </div>
+                     <div>
+                         <p id="game-message">Take your pick</p>
 
-    <script src="./assets/javascript.js">
+                         <img style="width: 100px;" onclick="pickChoice(1)" src="./assets/images/rock1.gif" />
+                         <img style="width: 100px;" onclick="pickChoice(2)" src="./assets/images/paper1.gif" />
+                         <img style="width: 100px;" onclick="pickChoice(3)" src="./assets/images/scissor1.gif" />
 
-    </script>
-
-</head>
-
-<body onload="initialized()">
-
-
-
-    <div class="container-main"> 
-
-
-        <div class="container-popup" id="container-popup"> 
-
-            <button onclick="hidePopupUI()">X</button>
-            
-
-            <div class="popup-choices-preview">
-                <div>
-                    <img id="human-choice-image"  src="./assets/images/rock1.gif"   />
+                         <div class="clear"> </div>
+                         <button id="play-again" class="play-again" onclick="playAgain()" >Play Again</button>
+                     </div>
                  </div>
-                 <div>
-                    <!-- right -->
 
-                    <img id="computer-choice-image" src="./assets/images/rock1.gif"   />
-                 </div>
+                <div class="container-right">
+                    <div class="score-board">
+                        <ul>
+                            <li>
+                                <span>
+                                    James
+                                </span>
+                            </li>
+                            <li>
+                                <div class="computer-life" id="computer-life">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
 
-                 
+                    <div class="container-piece">
+                        <div>
+                            <img id="computer-choice-image" src="./assets/images/paper2.gif" />
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div style="margin-top:100px; text-align: center;">
-
-                
-                    <h1 id="popup-round-result"></h1>
-
-             </div>
-
         </div>
 
-        <div class="container">
-
-            
-            <div class="container-left">
-                <!-- left -->
-
-                <div class="container-human">
-
-                    <div> 
-                        <button onclick="pickChoice(1)">
-                            ROCK
-
-                        </button>
-                    </div>
-                    <div>
-
-                        <button  onclick="pickChoice(2)">
-                            PAPER
-                        </button>
-
-                    </div>
-                    <div>
-
-                        <button  onclick="pickChoice(3)">
-                            SCISSOR
-                        </button>
-                    </div>
-
-                    <!-- <div>
-                            STONE
-                        </div> -->
-                </div>
-
-                <div id="human-choice" style="margin-top:20px; text-align: center;">
-                    ROCK
-                </div>
-
-                <!-- <div>
-                        STONE
-                    </dov> --> 
-            </div>
-            <div class="container-right">
-                <div style="color:white">
-                    COMPUTER CHOICE
-                </div>
-                <!-- <div>
-                    <button>
-                        ROCK
-                    </button>
-                    <button>
-                        PAPER
-                    </button>
-                    <button>
-                        CESOR
-                    </button>
-                </div> -->
-
-                <div id="computer-choice" style="margin-top:20px;">
-            
-                </div>
-            </div>
-        </div> 
-        <div> 
-            <ul>
-
-                <li>
-                    <b>Your Score:</b> <span id="human-score">0</span> / <span class="max-score"></span>
-                </li>
-                <li>
-                    <b>Computer Score:</b> <span id="computer-score">0</span>/ <span class="max-score"> </span>
-                </li>
-                <li style="display: block;" >
-                    <b>Winner:</b> <span id="round-winner"  ></span>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <!-- <button onclick="setGameStatus(1)">Play</button>-->
-            <button style="display: none;" id="game-status-play-again" onclick="setGameStatus(2)">
-                Play Again
-            </button> 
-            <button style="display: none;"  id="game-status-reset" onclick="setGameStatus(3)">Reset</button>
-        </div> 
-    </div>
-</body>
-
-
-
+        <script src="./assets/SoundEffect.js"></script>
+        <script src="./assets/main.js"></script>
+    </body>
 
 </html>
