@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <title>This is my application </title>
+
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <script src="./assets/javascript.js">
+
+    </script>
+
+</head>
+
+<body onload="initialized()">
+
+
+
+    <div class="container-main"> 
+
+
+        <div class="container-popup" id="container-popup"> 
+
+            <button onclick="hidePopupUI()">X</button>
+            
+
+            <div class="popup-choices-preview">
+                <div>
+                    <img id="human-choice-image"  src="./assets/images/rock1.gif"   />
+                 </div>
+                 <div>
+                    <!-- right -->
+
+                    <img id="computer-choice-image" src="./assets/images/rock1.gif"   />
+                 </div>
+
+                 
+            </div>
+
+            <div style="margin-top:100px; text-align: center;">
+
+                
+                    <h1 id="popup-round-result"></h1>
+
+             </div>
+
+        </div>
+
+        <div class="container">
+
+            
+            <div class="container-left">
+                <!-- left -->
+
+                <div class="container-human">
+
+                    <div> 
+                        <button onclick="pickChoice(1)">
+                            ROCK
+
+                        </button>
+                    </div>
+                    <div>
+
+                        <button  onclick="pickChoice(2)">
+                            PAPER
+                        </button>
+
+                    </div>
+                    <div>
+
+                        <button  onclick="pickChoice(3)">
+                            SCISSOR
+                        </button>
+                    </div>
+
+                    <!-- <div>
+                            STONE
+                        </div> -->
+                </div>
+
+                <div id="human-choice" style="margin-top:20px; text-align: center;">
+                    ROCK
+                </div>
+
+                <!-- <div>
+                        STONE
+                    </dov> --> 
+            </div>
+            <div class="container-right">
+                <div style="color:white">
+                    COMPUTER CHOICE
+                </div>
+                <!-- <div>
+                    <button>
+                        ROCK
+                    </button>
+                    <button>
+                        PAPER
+                    </button>
+                    <button>
+                        CESOR
+                    </button>
+                </div> -->
+
+                <div id="computer-choice" style="margin-top:20px;">
+            
+                </div>
+            </div>
+        </div> 
+        <div> 
+            <ul>
+
+                <li>
+                    <b>Your Score:</b> <span id="human-score">0</span> / <span class="max-score"></span>
+                </li>
+                <li>
+                    <b>Computer Score:</b> <span id="computer-score">0</span>/ <span class="max-score"> </span>
+                </li>
+                <li style="display: block;" >
+                    <b>Winner:</b> <span id="round-winner"  ></span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <!-- <button onclick="setGameStatus(1)">Play</button>-->
+            <button style="display: none;" id="game-status-play-again" onclick="setGameStatus(2)">
+                Play Again
+            </button> 
+            <button style="display: none;"  id="game-status-reset" onclick="setGameStatus(3)">Reset</button>
+        </div> 
+    </div>
+</body>
+
+
+
+
+</html>

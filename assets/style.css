@@ -1,0 +1,85 @@
+.container {
+    /* border:1px solid red; */
+    height: 200px;
+
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */ 
+}
+
+.container-left { 
+    flex: 50%;
+    padding:50px 20px 10px 10px;
+    /* border:1px solid yellow; */
+    background-color: green;
+
+    /* padding-top:20px; */
+}
+.container-right {
+    flex: 50%;
+    padding:10px;
+
+ 
+    /* align-content: center; */
+    background-color: red;
+}
+
+.container-right div {
+    align-items: center;
+    justify-content: center;
+    /* border:1px solid green; */
+    /* width: 150px;; */
+    text-align: center;
+}
+
+.container-human {
+    display: flex;
+}
+.container-human div  
+ {
+    flex:50%;
+} 
+.container-human div:nth-child(3)  
+ {
+    /* border:1px solid red; */
+    width: 100%;
+    flex-basis: 100;
+} 
+
+
+/* popup */
+
+.container-popup { 
+    padding:10px;
+    /* border:1px solid red; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 236, 112);
+    /* opacity: 0.96; */
+    opacity: 1;
+    display: none;
+}
+
+.popup-choices-preview {
+    display: flex;
+    padding:20px;
+}
+
+.popup-choices-preview div {
+    /* margin-top:20px; */
+    flex:50%;
+    border-left:1px solid rgb(32, 32, 32);
+    height: 200px;
+    text-align: center; 
+    padding:10px;
+}
+
+.popup-choices-preview div img {
+    /* margin-top:20px; */
+    /* flex:50%; */
+    /* border:1px solid red; */
+    /* height: 200px; */ 
+    width: 80%; 
+    max-height: 250px;
+}
